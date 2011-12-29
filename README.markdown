@@ -20,9 +20,11 @@ Add User.AddUserMenusAfter to an entry in your sitemap, and add this somewhere i
 	LiftRules.setSiteMapFunc(() => User.sitemapMutator(sitemap()))
 
 Add ExtSession to Boot:
+
 	LiftRules.earlyInStateful.append(ExtSession.testCookieEarlyInStateful)
 
 Configure Mailer in Boot, to allow for recovering passwords and verifying user emails:
+
 	def configMailer(host: String, user: String, password: String) {
 	  // Enable TLS support
 	  System.setProperty("mail.smtp.starttls.enable","true");
